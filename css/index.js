@@ -32,11 +32,11 @@ function updateCity(event) {
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
-  console.log(cityTimeZone);
+  //console.log(cityTimeZone);
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-  console.log(cityName);
+  //console.log(cityName);
   let cityTime = moment().tz(cityTimeZone);
-  console.log(cityTime.format("dddd Do MMMM, YYYY"));
+  //console.log(cityTime.format("dddd Do MMMM, YYYY"));
   let changeCity = document.querySelector("#place");
   changeCity.innerHTML += `<div class="city">
           <div>
@@ -48,9 +48,10 @@ function updateCity(event) {
           )} <small>${cityTime.format("A")}</small>
           </div>
         </div>
+       
         <a href ="/">Back to Home Page</a>
         `;
 }
-
+// <a href ="index.html">Back to Home Page</a> will make it work on computer above works on platform.
 let citiesSelectedElement = document.querySelector("#chosen-city");
 citiesSelectedElement.addEventListener("change", updateCity);
