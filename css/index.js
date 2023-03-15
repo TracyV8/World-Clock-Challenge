@@ -9,7 +9,7 @@ function updateTime() {
       .format("dddd Do MMMM, YYYY");
     losAngelesTimeElemnent.innerHTML = moment()
       .tz("America/Los_Angeles")
-      .format("h:mm:ss:SSS [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
   }
   // Sydney
   let sydneyElement = document.querySelector("#sydney");
@@ -21,7 +21,7 @@ function updateTime() {
       .format("dddd Do MMMM, YYYY");
     sydneyTimeElemnent.innerHTML = moment()
       .tz("Australia/Sydney")
-      .format("h:mm:ss:SSS [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
   }
 }
 updateTime();
